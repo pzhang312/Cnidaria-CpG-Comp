@@ -64,7 +64,7 @@ Myxozoa	Bivalvulida	Thelohanellus kitauei	Tki	gene models	GCA_000827895.1		0.959
 Myxozoa	Multivalvulida	Kudoa iwatai	Kiw	transcriptome	"Kayal et al., 2018"	93.5	0.558824648	1.454131133	-0.307741145	 E 8 					Both DNMTs and MBD present			22.5			
 Polypodiozoa	Polypodiidea	Polypodum hydriforme	Phy	transcriptome	"Kayal et al., 2018"	87.6	0.683010315	1.463292754	-0.369134113	 E 5 					Both DNMTs and MBD present			561			
 Scyphozoa	Coronatae	Atolla vanhoeffeni	Ava	transcriptome	"Kayal et al., 2018"	64.7	0.707422578	1.399936322	-0.274274096	 V 3 					Both DNMTs and MBD present						
-Scyphozoa	Rhizostomeae	Cassiopea xamachana (transcriptome)	Cxa	transcriptome	"Kayal et al., 2018"	55.1	0.57679533	1.374350359	-0.274903273	 V 7 					Both DNMTs and MBD present			362			
+Scyphozoa	Rhizostomeae	Cassiopea xamachana (transcriptome)	Cxa	transcriptome	"Kayal et al., 2018"	55.1	0.57679533	1.374350359	-0.274903273	 V 7 	0.648979604	1.177608012	-0.042937572		Both DNMTs and MBD present		48.73	362	48.73	GCA_900291935.1	
 Scyphozoa	Rhizostomeae	Nemopilema nomurai	Nno	transcriptome	GHAR00000000	96.2	0.69331646	1.381989761	-0.261246098	 V 4 					Both DNMTs and MBD present		21.07	216			
 Scyphozoa	Rhizostomeae	Rhopilema esculentum	Res	transcriptome	GEMS00000000	96.4	0.65733585	1.342540677	-0.247923832	 V 4 					Both DNMTs and MBD present			257			
 Scyphozoa	Rhizostomeae	Stomolophus meleagris	Sme	transcriptome	"Kayal et al., 2018"	83.8	0.702509248	1.392462734	-0.277421476	 V 4 					Both DNMTs and MBD present						
