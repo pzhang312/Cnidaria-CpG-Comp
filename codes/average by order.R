@@ -4,8 +4,8 @@ library(cowplot)
 library(ggpubr)
 data1 = read.table("/Users/zhangxinhui/Box Sync/Aurelia_Genetics_Epigenetics/Methylation/CGcontent/Inverts_CpG/CpG_data/outputs/cnidaria/01_stats/cnidarian_sum1_with_new_eta_script.txt", header = T, sep = "\t", quote = "")
 data1$Class = factor(data1$Class, levels = c("Anthozoa","Polypodiozoa", "Myxozoa", "Staurozoa", "Cubozoa", "Scyphozoa", "Hydrozoa"))
-
 data1$Order = factor(data1$Order, levels = c("Alcyonacea","Helioporacea", "Actiniaria","Corallimorpharia","Scleractinia","Polypodiidea", "Multivalvulida", "Bivalvulida", "Stauromedusae", "Carybdeida", "Chirodropoda", "Coronatae", "Semaeostomeae", "Rhizostomeae", "Limnomedusae", "Narcomedusae", "Siphonophorae", "Leptothecata", "Anthoathecata"), ordered = TRUE)
+
 bp1 = ggplot(data1, aes(x=Order, y=Mean_GB_CpG, color=Class)) + geom_boxplot(outlier.shape = NA)
 bp1 + theme(axis.text.x = element_text(angle = 90), axis.title = element_text(size=14,face="bold"), axis.text = element_text(size = 12,face="bold")) + xlab("Order") + ylab("Average Gene Body CpG o/e") + geom_dotplot(binaxis='y', stackdir='center', dotsize=45, binwidth = 0.0002, aes(fill=factor(genes))) + labs(color = "Class", fill = "genes") + scale_fill_manual(values = c("red","gray", "green", "blue"))
 
@@ -50,16 +50,18 @@ dp4 + scale_colour_manual(values=cbPalette) + scale_x_continuous(trans='log10') 
 
 
 # fig2a: genome size and repeat and CpG in one graph # 
+data1$Class = factor(data1$Class, levels = c("Anthozoa","Cubozoa", "Hydrozoa", "Myxozoa", "Scyphozoa"))
+
 dp6 = ggplot(data1, aes(x=repeat_content, y=mean_repeats_CpG))+ geom_point(aes(size = genome_size, color = Class))
-fig2a = dp6 + scale_colour_manual(values=cbPalette) + scale_size_continuous(limits = c(50,1500))+ theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Repeat Content (%)") + ylab("Average Repeat CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines")) + labs(size = "Genome Size", color = "Class") + expand_limits(x = c(10, 60))
+fig2a = dp6 + scale_colour_manual(values=cbPalette, na.translate = F) + scale_size_continuous(limits = c(50,1500))+ theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Repeat Content (%)") + ylab("Average Repeat CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines")) + labs(size = "Genome Size", color = "Class") + expand_limits(x = c(10, 60))
 
 dp7 = ggplot(data1, aes(x=repeat_content, y=Mean_GB_CpG))+ geom_point(aes(size = genome_size, color = Class))
-fig2b = dp7 + scale_colour_manual(values=cbPalette) + scale_size_continuous(limits = c(50,1500))+ theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Repeat Content (%)") + ylab("Average Gene Body CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines")) + labs(size = "Genome Size", color = "Class") + expand_limits(x = c(10, 60))
+fig2b = dp7 + scale_colour_manual(values=cbPalette, na.translate = F) + scale_size_continuous(limits = c(50,1500))+ theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Repeat Content (%)") + ylab("Average Gene Body CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines")) + labs(size = "Genome Size", color = "Class") + expand_limits(x = c(10, 60))
 #fig2c: GB CpG changes with repeat CpG#
 dp5 = ggplot(data1, aes(x=mean_repeats_CpG, y=Mean_GB_CpG)) + geom_point(aes(size = genome_size, color = Class))
-fig2c = dp5 + scale_colour_manual(values=cbPalette) + scale_size_continuous(limits = c(50,1500)) + theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Average Repeat CpG o/e") + ylab("Average Gene Body CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines"))+ labs(size = "Genome Size", color = "Class")
+fig2c = dp5 + scale_colour_manual(values=cbPalette, na.translate = F) + scale_size_continuous(limits = c(50,1500)) + theme(axis.title = element_text(size=11,face="bold"), axis.text = element_text(size = 11,face="bold"), legend.title = element_text(size = 10), legend.text = element_text(size = 10)) + xlab("Average Repeat CpG o/e") + ylab("Average Gene Body CpG o/e") + geom_text_repel(aes(label=abbriviation), size=5, box.padding = unit(0.15, "lines"))+ labs(size = "Genome Size", color = "Class")
 
-tiff("Fig2v5.tiff",width = 8, height = 10, units = 'in', res = 300)
+tiff("Fig2v7.tiff",width = 8, height = 10, units = 'in', res = 300)
 ggarrange(fig2a, fig2b, fig2c, labels = c("A", "B", "C"),common.legend = TRUE, nrow = 3, legend = 'right')
 dev.off()
 jpeg("fig2.jpeg",width = 8, height = 10, units = 'in', res = 300)
