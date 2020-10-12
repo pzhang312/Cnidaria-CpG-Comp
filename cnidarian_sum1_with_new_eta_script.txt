@@ -1,6 +1,6 @@
 Class	Order	Species	abbriviation	Gene body source	source	BUSCO%	 Mean_GB_CpG 	 lm(TpG~CpG)_Intersect 	 lm(TpG~CpG)_Slope 	 Gaussian_model_name 	mean_repeats_CpG	 repeats_lm(TpG~CpG)_Intersect 	 repeats_lm(TpG~CpG)_Slope 	 repeats_Gaussian_model_name 	genes		repeat_content	genome_size	repeat_content_me	repeat_source	size_note
 Anthozoa	Actiniaria	Actinia tenebrosa	Ate	transcriptome	GCF_009602425	98	0.688995991	1.431186106	-0.318025052	 V 2	0.897702564	1.291651012	-0.203860493		Both DNMTs and MBD present		19.57	255	24.84	GCF_009602425.1	
-Anthozoa	Actiniaria	Aiptasia pallida	Apa	transcriptome	"Kayal et al., 2018"	92.7	0.711158795	1.416898397	-0.295429994	 V 3 	0.977235147	1.317927341	-0.239122826		Both DNMTs and MBD present		26	260	19.42	GCF_001417965.1	
+Anthozoa	Actiniaria	Aiptasia pallida	Apa	transcriptome	GCF_001417965	92.7	0.691787329	1.459009994	-0.312000041	 V 3	0.977235147	1.317927341	-0.239122826		Both DNMTs and MBD present		26	260	19.42	GCF_001417965.1	
 Anthozoa	Actiniaria	Anthopleura elegantissima	Aele	transcriptome	"Kayal et al., 2018"	97.4	0.677358312	1.466454999	-0.319872787	 V 6 					Both DNMTs and MBD present						
 Anthozoa	Actiniaria	Edwardsiella lineata	Eli	transcriptome	"Kayal et al., 2018"	66.5	0.753577326	1.460347435	-0.306024736	 V 3 					Both DNMTs and MBD present						
 Anthozoa	Actiniaria	Nematostella vectensis 	Nve	transcriptome	GCA_000209225.1		0.767139687	1.433721959	-0.332393614	 V 3 	0.859289255	1.170999115	-0.085955415		Both DNMTs and MBD present		26	329	31.74	GCF_000209225.1	
@@ -61,7 +61,6 @@ Myxozoa	Bivalvulida	Myxobolus cerebralis	Mce	transcriptome	"Kayal et al., 2018"	
 Myxozoa	Bivalvulida	Myxobolus pendula	Mpe	transcriptome	"Kayal et al., 2018"	97.2	0.822609086	1.412116208	-0.319528276	 E 7 					Both DNMTs and MBD present						
 Myxozoa	Bivalvulida	Myxobolus squamalis	Msq	transcriptome	GHBR00000000		1.002258561	1.320318344	-0.180042759	 V 2 	0.616227574	1.172773062	-0.118010193		Both DNMTs and MBD absent		13.49	53.1	13.49	GCA_010108815.1	
 Myxozoa	Bivalvulida	Thelohanellus kitauei	Tki	gene models	GCA_000827895.1		0.959503188	1.311072943	-0.192870461	 V 2 	1.07195864	1.300677949	-0.17174356		Both DNMTs and MBD absent		13.8	188.5	26.59	GCA_000827895.1	
-Myxozoa	Multivalvulida	Kudoa iwatai	Kiw	transcriptome	"Kayal et al., 2018"	93.5	0.558824648	1.454131133	-0.307741145	 E 8 					Both DNMTs and MBD present			22.5			
 Polypodiozoa	Polypodiidea	Polypodum hydriforme	Phy	transcriptome	"Kayal et al., 2018"	87.6	0.683010315	1.463292754	-0.369134113	 E 5 					Both DNMTs and MBD present			561			
 Scyphozoa	Coronatae	Atolla vanhoeffeni	Ava	transcriptome	"Kayal et al., 2018"	64.7	0.707422578	1.399936322	-0.274274096	 V 3 					Both DNMTs and MBD present						
 Scyphozoa	Rhizostomeae	Cassiopea xamachana (transcriptome)	Cxa	transcriptome	"Kayal et al., 2018"	55.1	0.57679533	1.374350359	-0.274903273	 V 7 	0.648979604	1.177608012	-0.042937572		Both DNMTs and MBD present		48.73	362	48.73	GCA_900291935.1	
